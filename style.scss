@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+$textColor: #212529;
+$mainColor: #099268;
+$secondaryColor: #63e6be;
+$linkColor: #4263eb;
+$borderRadius: 4px;
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #c3fae8;
+  @include flexCenter();
+  height: 100vh;
+  color: #fff;
+  .main-div {
+    background-color: $mainColor;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: $borderRadius;
+    h1 {
+      align-self: center;
+      margin-bottom: 2rem;
+    }
+    form {
+      @include flexCenter();
+      .input-div {
+        margin-bottom: 2rem;
+        position: relative;
+        label {
+          padding-top: 0.5rem;
+          font-size: 16px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          pointer-events: none;
+          span {
+            display: inline-block;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          }
+        }
+        input {
+          background-color: $mainColor;
+          border: none;
+          border-bottom: 1px #fff solid;
+          padding: 0.5rem;
+          color: #fff;
+          font-size: 16px;
+          font-family: inherit;
+
+          &:focus,
+          &:valid {
+            outline: none;
+            border-bottom-color: $secondaryColor;
+            & + label span {
+              color: $secondaryColor;
+              transform: translateY(-25px);
+            }
+          }
+        }
+      }
+      .btn {
+        cursor: pointer;
+        width: 100%;
+        height: 2rem;
+        background-color: $secondaryColor;
+        border: none;
+        border-radius: $borderRadius;
+        margin-bottom: 2rem;
+        font-family: inherit;
+        font-size: 16px;
+        color: $textColor;
+        &:active {
+          transform: scale(0.99);
+        }
+      }
+    }
+    p {
+      font-size: 14px;
+      a {
+        &:link {
+          text-decoration: none;
+          color: $linkColor;
+        }
+        &:visited {
+          color: $linkColor;
+        }
+      }
+    }
+  }
+}

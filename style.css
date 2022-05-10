@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #c3fae8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  color: #fff;
+}
+
+body .main-div {
+  background-color: #099268;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 4px;
+}
+
+body .main-div h1 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 2rem;
+}
+
+body .main-div form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .main-div form .input-div {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+body .main-div form .input-div label {
+  padding-top: 0.5rem;
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+body .main-div form .input-div label span {
+  display: inline-block;
+  -webkit-transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body .main-div form .input-div input {
+  background-color: #099268;
+  border: none;
+  border-bottom: 1px #fff solid;
+  padding: 0.5rem;
+  color: #fff;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+body .main-div form .input-div input:focus, body .main-div form .input-div input:valid {
+  outline: none;
+  border-bottom-color: #63e6be;
+}
+
+body .main-div form .input-div input:focus + label span, body .main-div form .input-div input:valid + label span {
+  color: #63e6be;
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
+}
+
+body .main-div form .btn {
+  cursor: pointer;
+  width: 100%;
+  height: 2rem;
+  background-color: #63e6be;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  font-family: inherit;
+  font-size: 16px;
+  color: #212529;
+}
+
+body .main-div form .btn:active {
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
+}
+
+body .main-div p {
+  font-size: 14px;
+}
+
+body .main-div p a:link {
+  text-decoration: none;
+  color: #4263eb;
+}
+
+body .main-div p a:visited {
+  color: #4263eb;
+}
+/*# sourceMappingURL=style.css.map */
